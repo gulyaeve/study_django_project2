@@ -1,6 +1,9 @@
 from django.shortcuts import render
 
 from myapp2.models import Player
+from rest_framework.viewsets import ModelViewSet
+
+from myapp2.serializers import PlayerSerializer
 
 
 def index_page(request):
@@ -14,3 +17,10 @@ def index_page(request):
     # pl.delete()
     # pl.save()
     return render(request, 'index.html', {'players': all_players})
+
+class PlayerView(ModelViewSet):
+    queryset = Player.objects.all()
+    serializer_class = PlayerSerializer
+
+def players_page(request):
+    return render(request, 'players.html')
