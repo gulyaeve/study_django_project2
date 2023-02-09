@@ -9,6 +9,16 @@
 
 </head>
 <body>
+{% verbatim %}
+<div class="container" id="players_data">
+  <div class="btn btn-warning btn-lg" v-for="player in players">
+    Name: {{ player.name }}
+    <br />
+    Number: {{ player.number }}
+  </div>
+</div>
+{% endverbatim %}
 
+<script src="/static/app.js"></script>
 </body>
 </html>
