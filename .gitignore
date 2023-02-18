@@ -212,4 +212,4 @@ dmypy.json
 cython_debug/
 
 # Database object
-db.sqlte3
+mydjangoproject2/db.sqlite3
